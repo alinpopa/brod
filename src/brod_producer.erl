@@ -133,7 +133,7 @@
 %%   retry_backoff_ms (optional, default = 500);
 %%     Time in milli-seconds to sleep before retry the failed produce request.
 %%   compression (optional, default = no_compression):
-%%     'gzip' or 'snappy' to enable compression
+%%     'gzip' to enable compression
 %%   min_compression_batch_size (in bytes, optional, default = 1K):
 %%     Only try to compress when batch size is greater than this value.
 %%   max_linger_ms(optional, default = 0):

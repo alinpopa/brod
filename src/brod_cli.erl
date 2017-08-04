@@ -163,7 +163,7 @@ options:
                          The value can be an integer to indicate number of
                          milliseconds or followed by s/m to indicate seconds
                          or minutes [default: 10s]
-  --compression=<compre> Supported values: none / gzip / snappy
+  --compression=<compre> Supported values: none / gzip
                          [default: none]
 "
 ?COMMAND_COMMON_OPTIONS
@@ -213,7 +213,7 @@ options:
                          The value can be either an integer to indicate bytes
                          or followed by K/M to indicate KBytes or MBytes
                          [default: 1M]
-  --compression=<compr>  Supported values: none/gzip/snappy [default: none]
+  --compression=<compr>  Supported values: none/gzip [default: none]
 "
 ?COMMAND_COMMON_OPTIONS
 "NOTE: When --source is path/to/file, it by default reads from BOF
@@ -828,7 +828,6 @@ parse_timeout(Str) ->
 %% @private
 parse_compression("none") -> no_compression;
 parse_compression("gzip") -> gzip;
-parse_compression("snappy") -> snappy;
 parse_compression(X) -> erlang:throw(bin(["Unknown --compresion value: ", X])).
 
 %% @private

@@ -27,7 +27,7 @@
 -type kafka_group_id()            :: binary().
 -type kafka_group_member_id()     :: binary().
 -type kafka_group_generation_id() :: non_neg_integer().
--type kafka_compression()         :: no_compression | gzip | snappy.
+-type kafka_compression()         :: no_compression | gzip.
 -type brod_client_id()            :: atom().
 
 -record(kafka_message,
